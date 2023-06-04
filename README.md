@@ -1,4 +1,4 @@
-# Arduino-FCS
+# Arduino Coilgun & FCS
 這是自主學習 Arduino 的主程式碼   
 你可以在這部[影片](https://)中了解他的運作方式
 
