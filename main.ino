@@ -314,7 +314,6 @@ void setup() {
   xserv.attach(12);
   yserv.attach(13);
   zserv.attach(11);
-  //yserv.write(90);
   yserv.write(yservA); //舵機歸0
   xserv.write(xservA);
   zserv.write(zservA);
@@ -355,18 +354,6 @@ void loop() {
         delay(1000);
         digitalWrite(26,1);
         lcd.clear();
-
-        /*lcd.print("test");
-        while(1){
-          xserv.write(100);
-          yserv.write(100);
-          zserv.write(100);
-          delay(700);
-          xserv.write(0);
-          yserv.write(0);
-          zserv.write(0);
-          delay(700);
-        }*/
         break;
         
       case 'B':   //充電
@@ -395,66 +382,6 @@ void loop() {
         digitalWrite(28,1);
         reload();
         break;
-        /*
-      case 1:    //仰角測試
-        Serial.println("yserv +");
-        yservA += 10;
-        yserv.write(yservA);
-        delay(50);
-        break;
-
-      case '2':
-        Serial.println("yserv -");
-        if(yservA>2){
-          yservA -= 10;
-        }
-        else{
-          break;
-        }        
-        yserv.write(yservA);
-        delay(50);
-        break;     
-
-      case '3':    //旋轉測試
-        lcd.clear();
-        lcd.print("rotate");
-        rotate();
-        lcd.clear();        
-        break;        
-
-      case '4':    //三舵機旋轉測試
-        lcd.clear();
-        lcd.print("test");
-        while(1){
-          xserv.write(100);
-          yserv.write(100);
-          zserv.write(100);
-          delay(700);
-          xserv.write(0);
-          yserv.write(0);
-          zserv.write(0);
-          delay(700);
-        }
-        break;
-
-      case '5':  //填裝-發射測試
-        char gg;
-        lcd.clear();
-        lcd.print("tast 2");
-        reload();
-        digitalWrite(28,1);
-        delay(1300);
-        digitalWrite(28,0);
-        while(gg != 'A'){
-          gg = keypad.getKey();
-        }
-        digitalWrite(26,0);
-        delay(1000);
-        digitalWrite(26,1);
-        break;
-      case '6':  //填彈測試
-        reload();
-        break;*/
     }
     if(kk=='1'){
       Serial.println("xserv +");
